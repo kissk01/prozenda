@@ -16,18 +16,18 @@ const CharacterList = () => {
     useCharacters();
 
   const [listUrl, setListUrl] = useState<RequestInfo>('');
-  const [disableReset, setDisableRest] = useState<boolean>(true);
+  const [disableReset, setDisableReset] = useState<boolean>(true);
 
   const onLoadMore = () => {
     dispatch({ type: REDUCER_ACTIONS.CONTENT_LOADING });
-    setDisableRest(false);
+    setDisableReset(false);
     if (next) setListUrl(next);
   };
 
   const onReset = () => {
     dispatch({ type: REDUCER_ACTIONS.CONTENT_LOADING });
-    setDisableRest(true);
-    setListUrl(`https://swapi.dev/api/people/?cache=${new Date().getTime()}`);
+    setDisableReset(true);
+    setListUrl(`https://swapi.dev/api/people/`);
   };
 
   const getSearchData = async () => {
@@ -42,6 +42,9 @@ const CharacterList = () => {
 
   useEffect(() => {
     getSearchData();
+    return () => {
+      setListUrl('');
+    };
   }, [listUrl]);
 
   useEffect(() => {

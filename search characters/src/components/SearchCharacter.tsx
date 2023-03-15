@@ -19,7 +19,7 @@ const SearchCharacter = ({}: SearchProps): ReactElement => {
       return;
     }
     dispatch({ type: REDUCER_ACTIONS.CONTENT_LOADING });
-    const url = `https://swapi.dev/api/people/?search=${inputValue}&cache=${new Date().getTime()}`;
+    const url = `https://swapi.dev/api/people/?search=${inputValue}`;
     setSearchUrl(url);
   };
 
@@ -29,13 +29,15 @@ const SearchCharacter = ({}: SearchProps): ReactElement => {
     }
     const data = await fetch(searchUrl);
     const parsedData = await data.json();
-    console.log(parsedData, ' search value ');
     dispatch({ type: REDUCER_ACTIONS.SEARCH_CONTENT, payload: parsedData });
     setInputValue('');
   };
 
   useEffect(() => {
     getSearchData();
+    return () => {
+      setSearchUrl('');
+    };
   }, [searchUrl]);
 
   const content = (

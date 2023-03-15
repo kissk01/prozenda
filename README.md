@@ -18,6 +18,10 @@ Character list. Each item contains **title**, **gender**. For view we use masonr
 
 Sorts list ascending, descending and result by female or male.
 
+### **Reset button and functionality**
+
+Resets search to initial value (page 1 result) from load more state or search state.
+
 ### **Header**
 
 Header shows application title, max item and showed items count.
