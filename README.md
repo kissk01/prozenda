@@ -1,90 +1,122 @@
-# "Typescript for Beginners"
+# Prozenda Hungary Kft. test application
 
-### Full Course - 17 Chapters
+## User documentation - application description
 
----
+### **Basic details of the app**
 
-### Author Links
+The application starts with header, search input and button, character list, sort and footer.
 
-👋 Hello, I'm Dave Gray.
+### **Search view**
 
-✅ [Check out my YouTube Channel with all of my tutorials](https://www.youtube.com/DaveGrayTeachesCode).
+Character search input is triggered with search button, empty chars are not triggered. On search application returns found items or no content message.
 
-🚩 [Subscribe to my channel](https://bit.ly/3nGHmNn)
+### **List view**
 
-☕ [Buy Me A Coffee](https://buymeacoffee.com/DaveGray)
+Character list. Each item contains **title**, **gender**. For view we use masonry layout. It shows max item and showed items count.
 
-🚀 Follow Me:
+### **Sort view**
 
-- [Twitter](https://twitter.com/yesdavidgray)
-- [LinkedIn](https://www.linkedin.com/in/davidagray/)
-- [Blog](https://yesdavidgray.com)
-- [Reddit](https://www.reddit.com/user/DaveOnEleven)
+Sorts list ascending, descending and result by female or male.
 
----
+### **Header**
 
-### Description
+Header shows application title, max item and showed items count.
 
-📺 [YouTube Playlist](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6NS8GXt5nPrcYpust89zq_b) for this repository.
+### **Footer**
 
-🚀 This repository shares ALL of the resources referenced during the Typescript for Beginners tutorial series.
+Footer shows year and application name.
 
-- 👉 Chapters 1-10 introduce TypeScript fundamentals. 
-- 👉 Chapters 12-17 cover Typescript with React. 
+## Technical documentation
 
-### 📚 Recommended Prerequisites
-- 🔗 [JavaScript for Beginners Course](https://youtu.be/EfAl9bwzVZk)
-- 🔗 [React for Beginners Course](https://youtu.be/RVFAyFWO4go)
+### **IDE**
 
----
+For coding I used Visual Studio, version: 1.76.1 with popular code formatters like styleint, prettier, intelliSense.
 
-### 🎓 Academic Honesty
+### **Packages**
 
-**DO NOT COPY FOR AN ASSIGNMENT** - Avoid plagiarism and adhere to the spirit of this [Academic Honesty Policy](https://www.freecodecamp.org/news/academic-honesty-policy/).
+Project is using typescript, react, material ui, for testing jest.
 
----
+### **Typescript**
 
-### ⚙ Free Web Dev Tools
-- 🔗 [Vite](https://vitejs.dev/)
-- 🔗 [Google Chrome Web Browser](https://google.com/chrome/)
-- 🔗 [Visual Studio Code (aka VS Code)](https://code.visualstudio.com/)
-- 🔗 [Live Server VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+Project is using typescript both in application code and in tests.
 
-### 📚 References
-- 🔗 [Typescript Official Site](https://www.typescriptlang.org/)
-- 🔗 [Node.js & npm](https://nodejs.org/)
-- 🔗 [Anders Hejlsberg, Creator of Typescript and C# Interview](https://dev.to/destrodevshow/typescript-and-c-both-created-by-the-same-person-named-anders-hejlsberg-42g4)
-- 🔗 [Stackoverflow Survey Results](https://survey.stackoverflow.co/2022/#technology-most-popular-technologies)
-- - 🔗 [TypeScript + React Cheatsheet](https://github.com/typescript-cheatsheets/react)
-- 🔗 [React Official Site](https://reactjs.org/)
-  
-### 📚 Terminology
-- 🔗 [MDN - Static Typing](https://developer.mozilla.org/en-US/docs/Glossary/Static_typing)
-- 🔗 [MDN - Dynamic Typing](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing)
-- 🔗 [MDN - Type Coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
-- 🔗 [TypeScript - Type Assertions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)
+### **useContext and useReducer**
 
----
+The implementation is heavy for that small application, still we can use it if project grows.
 
-### 💻 Source Code
+### **API documentation**
 
-- 🔗 [Chapter 1 - Introduction, Setup & Config](https://github.com/gitdagray/typescript-course/tree/main/lesson01)
-- 🔗 [Chapter 2 - Basic Types](https://github.com/gitdagray/typescript-course/tree/main/lesson02)
-- 🔗 [Chapter 3 - Arrays, Tuples, Objects & Enums](https://github.com/gitdagray/typescript-course/tree/main/lesson03)
-- 🔗 [Chapter 4 - Type Aliases, Literals, Functions & Never Type](https://github.com/gitdagray/typescript-course/tree/main/lesson04)
-- 🔗 [Chapter 5 - Type Assertions & Type Casting](https://github.com/gitdagray/typescript-course/tree/main/lesson05)
-- 🔗 [Chapter 6 - Classes & Interfaces](https://github.com/gitdagray/typescript-course/tree/main/lesson06)
-- 🔗 [Chapter 7 - Index Signatures & keyof Assertions](https://github.com/gitdagray/typescript-course/tree/main/lesson07)
-- 🔗 [Chapter 8 - Generics](https://github.com/gitdagray/typescript-course/tree/main/lesson08)
-- 🔗 [Chapter 9 - Utility Types](https://github.com/gitdagray/typescript-course/tree/main/lesson09)
-- 🔗 Chapter 10 - Vite Introduction (_no source code_)
-- 🔗 [Chapter 11 - Beginners Project / Challenges](https://github.com/gitdagray/typescript-course/tree/main/lesson11)
-- 🔗 [Chapter 12 - React + Typescript Starter](https://github.com/gitdagray/typescript-course/tree/main/lesson12)
-- 🔗 [Chapter 13 - React Hooks + Typescript](https://github.com/gitdagray/typescript-course/tree/main/lesson13)
-- 🔗 [Chapter 14 - React useReducer + Typescript](https://github.com/gitdagray/typescript-course/tree/main/lesson14)
-- 🔗 [Chapter 15 - React useContext + Typescript](https://github.com/gitdagray/typescript-course/tree/main/lesson15)
-- 🔗 [Chapter 16 - React + Typescript Project - Part 1](https://github.com/gitdagray/typescript-course/tree/main/lesson16)
+As next we can think about generating swagger on server start and about implementing api tests in postman. For local api endpoint testing I used postman.
 
+### **API requests**
 
-### 🎉 Bonus!
-- 🔗 [TypeScript "as const" Assertions - Youtube Short](https://youtube.com/shorts/jEuIp5NU3TU)
+1. [https://swapi.dev/api/people/] On success returns payload with count, next, previous, characters objects. Each item contains name and gender we need. Example payload:
+
+```json
+{
+  "count": 82,
+  "next": "https://swapi.dev/api/people/?cache=3&page=2",
+  "previous": null,
+  "results": [
+    {
+      "name": "Luke Skywalker",
+      "gender": "male"
+    }
+  ]
+}
+```
+
+2. [https://swapi.dev/api/people/?search=${searchTerm}] On found returns payload with count, next, previous, characters objects. Each item contains name and gender we need. Example payload:
+
+```json
+{
+  "count": 82,
+  "next": "https://swapi.dev/api/people/?cache=3&page=2",
+  "previous": null,
+  "results": [
+    {
+      "name": "Luke Skywalker",
+      "gender": "male"
+    }
+  ]
+}
+```
+
+## Roadmap
+
+### **Test - code coverage**
+
+I only covered with unit tests function in libs directory. Sofar I added 3 separate test cases. In the future we should increase amount of tests.
+
+### **Fetching**
+
+We can think about eliminating useFetch hooks, using react query or swr.
+
+### **Usecontext, usereducer**
+
+For more complex project, think about using redux toolkit.
+
+### **Writing Reducers with Immer package**
+
+Write simpler immutable update logic using "mutating" syntax. This helps simplify implementations in reducer.
+
+### **Using in mobile applications**
+
+Application is not tested, runed yet on mobile. As next we can think of running it on mobiles.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.\
+Open [http://localhost:5173/](http://localhost:5173/) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm run test`
+
+Launches the test runner.\
+Some basic unit tests are implemente for sort libs.
